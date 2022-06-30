@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- font-awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Custom css  -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>Quiz Website</title>
+</head>
+
+<body>
+    <!-- start quiz btn -->
+    <div class="start-btn d-flex justify-content-center align-items-center h-100"><button type="button"
+            class="btn btn-light" data-bs-toggle="modal" data-bs-target="#quiz-info-modal">Start Quiz</button></div>
+    <!-- start quiz btn -->
+
+    <!-- Quiz Info Modal -->
+    <div class="modal fade" id="quiz-info-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center" id="exampleModalLabel">Some Rules for the Quiz</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="quiz-info">
+                        <ol>
+                            <li>You will have only <span>15 seconds</span> per each question.</li>
+                            <li>Once you select your answer, you can't reselect.</li>
+                            <li>You cant select any option once time goes off</li>
+                            <li>you cant exit from the Quiz while you're playing</li>
+                            <li>You'll get points on the basis of your correct answers</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Exit Quiz</button>
+                    <button type="button" class="btn btn-primary " id="continue-btn" data-bs-toggle="modal"
+                        data-bs-target="#quiz-question-modal" data-bs-dismiss="modal">Continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Quiz Info Modal -->
+
+    <!-- Quiz question Modal -->
+    <div class="modal fade" id="quiz-question-modal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header d-flex justify-content-between ">
+                    <h5 class="modal-title text-center" id="exampleModalLabel">Awesome Quiz Application</h5>
+                    <div class="timer">
+                        <div>Time left : <span id="time-sec">0</span></div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div id="quiz-qa-info">
+                        <div class="question-text">
+                            <span>What does HTML stand for?</span>
+                        </div>
+                        <div class="option-list">
+                            <div class="option">
+                                <span>Home Tool Preprocessor</span>
+                            </div>
+                            <div class="option">
+                                <span>Home Tool Markup Language</span>
+                            </div>
+                            <div class="option">
+                                <span> Hyper Text Markup Language</span>
+                                <i class="fa-solid"></i>
+                            </div>
+                            <div class="option">
+                                <span> Hyperlinks and Text Markup Language</span>
+                                <i class="fa-solid"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="result">
+                        <div class="result-text text-center">
+                            <span>Your Correct Answer : <strong id="correct">2</strong></span> <br>
+                            <span>Your Incorrect Answer : <strong id="incorrect">4</strong></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="total-que">
+                        <p><span id="complete-question">2</span> of <span id="total-question">5</span> Question</p>
+                    </div>
+                    <!-- <button type="button" class="btn btn-primary disabled" onclick="showresult()" id="next-question" >Show Result</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Quiz question Modal -->
+
+    <!-- bootstrap.bundle.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <!-- custom JS -->
+    <script src="assets/js/script.js"></script>
+    <!-- question list js -->
+    <script src="assets/js/questions.js"></script>
+</body>
+
+</html>

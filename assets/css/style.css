@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: #3AB0FF;
+    height: 100vh;
+}
+
+.btn.btn-outline-primary,
+.btn.btn-primary,
+.btn.btn-light {
+    color: #3AB0FF;
+    font-weight: bold;
+    letter-spacing: .8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.btn.btn-primary {
+    color: #fff;
+    background-color: #3AB0FF;
+    border-color: #3AB0FF;
+}
+
+.btn.btn-outline-primary {
+    border-color: #3AB0FF;
+}
+
+.btn-outline-primary:hover {
+    color: #fff;
+    background-color: #3AB0FF
+}
+
+.modal-content {
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.modal-header {
+    border-bottom: unset;
+    display: unset;
+}
+
+.quiz-info ol {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: .8px;
+}
+
+.quiz-info ol span {
+    color: #3AB0FF;
+}
+
+.modal-footer {
+    border-top: unset;
+}
+
+
+
+.timer div {
+    padding: 6px 10px;
+    background: bisque;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.result-text span,
+.question-text span {
+    font-size: 22px;
+    font-weight: 800;
+}
+#result{
+    display: none;
+}
+.option-list .option {
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid #3AB0FF;
+    background-color: #F1F0C0;
+    margin-top: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.option-list .option i {
+    position: absolute;
+    top: 50%;
+    right: 2%;
+    transform: translate(0%, -50%);
+    height: 30px;
+    width: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all .2ms linear;
+}
+
+.option-list .option i.fa-check {
+    background-color: #53BF9D;
+    opacity: 1;
+}
+
+.option-list .option i.fa-xmark {
+    background-color: #F94C66;
+    opacity: 1;
+}
+
+#quiz-question-modal .modal-footer {
+    justify-content: space-between;
+}
+
+#quiz-question-modal .modal-footer p {
+    margin-bottom: 0px;
+    font-weight: bold;
+}
+
